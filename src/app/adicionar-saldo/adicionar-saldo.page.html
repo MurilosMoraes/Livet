@@ -1,0 +1,224 @@
+<ion-content>
+  <div>
+    <ion-icon  [routerLink]="['/home']" *ngIf="select" class="back" name="arrow-back-circle-outline"></ion-icon>
+    <ion-icon   (click)="showSelect()" *ngIf="ted" class="back" name="arrow-back-circle-outline"></ion-icon>
+    <ion-icon  (click)="showSelect()" *ngIf="boleto" class="back" name="arrow-back-circle-outline"></ion-icon>
+    <ion-icon  (click)="showBoleto()" *ngIf="confirmar" class="back" name="arrow-back-circle-outline"></ion-icon>
+    <ion-icon  [routerLink]="['/home']" *ngIf="gerado" class="back" name="arrow-back-circle-outline"></ion-icon>
+  </div>
+
+  <!-- SELECT -->
+
+  <div *ngIf="select">
+
+    <div class="container">
+      <h1 class="title">
+        Escolha sua forma <br> de adicionar saldo
+      </h1>
+
+      <div (click)="showBoleto()" style="margin-top: 30px !important;" class="btn">
+        <ion-icon class="icons" name="document-text-outline"></ion-icon>
+
+        <p class="text">
+          Boleto
+        </p>
+      </div>
+
+      <div (click)="showTed()" class="btn">
+        <ion-icon class="icons" name="git-compare-outline"></ion-icon>
+        <p class="text">
+          TED
+        </p>
+      </div>
+
+
+      <div class="cta">
+        CONFIRMAR
+      </div>
+    </div>
+  </div>
+
+  <!-- TED -->
+
+  <div *ngIf="ted">
+    <div class="container">
+      <h1 class="title">
+        Anote seus dados
+      </h1>
+      <p class="sub">
+        Anote seus dados e utilize-os para realizar TEDs de outros bancos para sua conta digital LivetPay.
+      </p>
+
+      <div class="flex mg-top-30">
+        <div>
+          <img class="img-ted" src="../../assets/icones/bank-icon2.png" alt="">
+        </div>
+        <div>
+          <p class="text-ted">LIVET PAY TECHNOLOGY LTDA</p>
+        </div>
+      </div>
+
+
+      <div class="flex">
+        <div>
+          <img class="img-ted" src="../../assets/icones/bank-icon2.png" alt="">
+        </div>
+        <div>
+          <p class="text-ted">Banco BS2 (218)</p>
+        </div>
+      </div>
+
+
+      <div class="flex ">
+        <div>
+          <img class="img-ted" src="../../assets/icones/id-icon.png" alt="">
+        </div>
+        <div>
+          <p class="text-ted">0000-1</p>
+        </div>
+      </div>
+
+
+      <div class="flex ">
+        <div>
+          <img class="img-ted" src="../../assets/icones/usercheck-icon.png" alt="">
+        </div>
+        <div>
+          <p class="text-ted">0792884-0</p>
+        </div>
+      </div>
+
+      <div (click)="showSelect()" class="cta">
+        VOLTAR
+      </div>
+    </div>
+  </div>
+
+  <!-- BOLETO -->
+
+  <div *ngIf="boleto">
+
+    <div class="container">
+      <h1 class="title">
+        Crie seu boleto de depósito
+      </h1>
+      <p class="sub">
+        Seu saldo será copensado em até <br> 3 dias úteis
+      </p>
+
+      <div>
+        <p class="title-valor">
+          Eu quero depositar...
+        </p>
+
+        <ion-input class="input-valor">R$</ion-input>
+      </div>
+
+      <div (click)="showConfirmar()" style="margin-top: 50px !important;" class="cta">
+        Confirmar
+      </div>
+
+      <div>
+        <img class="porquinho" src="../../assets/porquinho.gif" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRMAR -->
+
+  <div *ngIf="confirmar">
+    <div class="container">
+      <h1 class="title">
+        Crie seu boleto de depósito
+      </h1>
+
+      <div>
+        <h2 class="title-infos">
+          VALOR
+        </h2>
+        <p class="infos">
+          R$000,00
+        </p>
+      </div>
+
+      <div>
+        <h2 class="title-infos">
+          VENCIMENTO
+        </h2>
+        <p class="infos">
+          21/11/2020
+        </p>
+      </div>
+
+      <div>
+        <h2 class="title-infos">
+          CONTA DE DESTINO
+        </h2>
+        <p class="infos">
+          Conta Digital Livet Pay
+        </p>
+        <p class="infos">
+          000.000.000-00
+        </p>
+        <p class="infos">
+          JOÃO MARCOS BECKER
+        </p>
+      </div>
+
+      <div (click)="showGerado()" style="margin-top: 50px !important;" class="cta">
+        GERAR BOLETO
+      </div>
+
+      <div>
+        <img class="porquinho" src="../../assets/porquinho.gif" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- GERADO -->
+
+  <div *ngIf="gerado">
+    <div class="container">
+      <img class="img-gerado" src="../../assets/boleto_gerado.gif" alt="">
+      <div>
+        <h1 class="title">
+          Boleto gerado com sucesso!
+        </h1>
+        <p class="sub">
+          Copie a linha digitável ou faça <br>
+          download do seu boleto.
+        </p>
+      </div>
+
+      <div class="flex-cta">
+        <div style="margin-right: 10px;" class="cta-flex">
+          <ion-icon class="icon-cta-flex" name="copy-outline"></ion-icon>
+          <p>COPIAR</p>
+        </div>
+        <div class="cta-flex">
+          <ion-icon class="icon-cta-flex" name="download-outline"></ion-icon>
+          <p>BAIXAR</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 10px !important;" class="cta-gerado">
+        <ion-icon class="clip" name="attach-outline"></ion-icon>
+        <p>Anexar Comprovante</p>
+      </div>
+    </div>
+
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="footer">
+    <div [routerLink]="['/home']">
+      <img src="../../assets/icones/icon_home.png" alt="">
+    </div>
+    <div [routerLink]="['/explorar']">
+      <img src="../../assets/icones/icon_explore.png" alt="">
+    </div>
+    <div [routerLink]="['/perfil']">
+      <img src="../../assets/icones/icon_plus.png" alt="">
+    </div>
+  </div>
+</ion-footer>

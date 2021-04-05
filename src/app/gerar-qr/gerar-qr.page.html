@@ -1,0 +1,169 @@
+<ion-content>
+  <div class="flex">
+    <ion-icon [routerLink]="['/transferencia']" *ngIf="gerar" class="back" name="arrow-back-circle-outline"></ion-icon>
+    <ion-icon (click)="showGerar()" *ngIf="inputs" class="back" name="arrow-back-circle-outline"></ion-icon>
+ 
+<!-- BACK COMPROVANTE -->
+
+    <ion-icon  [routerLink]="['/home']" *ngIf="comprovante" class="back" name="arrow-back-circle-outline"></ion-icon>
+
+    <div class="flex-2">
+      <p *ngIf="gerar" class="alternar">Alternar</p>
+      <p *ngIf="inputs" class="alternar">Alternar</p>
+
+      <ion-icon *ngIf="gerar" class="icon-alternar" name="qr-code-outline"></ion-icon>
+      <ion-icon *ngIf="inputs" class="icon-alternar" name="qr-code-outline"></ion-icon>
+    </div>
+  </div>
+
+<!-- SCREEN 1 GERAR -->
+
+  <div *ngIf="gerar">
+    <div class="container">
+      <div class="flex-2">
+        <img class="img-loja" src="../../assets/pexels-madison-inouye-4029477.jpg" alt="">
+        <p class="nome-loja">
+          Doceria da Kah
+        </p>
+      </div>
+      <h1 class="title">
+        Gere seu QR Code
+      </h1>
+      <p class="sub">
+        Pulvinar pellentesque habitant morbi
+      </p>
+      <p class="sub">
+        tristique senectus et.
+      </p>
+      <img class="img" src="../../assets/qrcodegerado.png" alt="">
+
+      <div (click)="showInputs()" *ngIf="gerar" class="cta">
+        GERAR QR CODE
+      </div>
+
+    </div>
+  </div>
+
+<!-- SCREEN 2 INPUTS -->
+
+  <div *ngIf="inputs">
+    <div class="container">
+      <div class="flex-2">
+        <img class="img-loja" src="../../assets/pexels-madison-inouye-4029477.jpg" alt="">
+        <p class="nome-loja">
+          Doceria da Kah
+        </p>
+      </div>
+      <div>
+        <h1 style="margin-top: 30px;" class="title-input">
+          Insira o valor
+        </h1>
+
+        <ion-input class="input" placeholder="R$00,00"></ion-input>
+      </div>
+
+      <div>
+        <h1 style="margin-top: 20px;" class="title-input">
+          Descrição
+        </h1>
+
+        <ion-input class="input" placeholder="Opcional"></ion-input>
+      </div>
+
+      <div (click)="showQr()" *ngIf="inputs" class="cta">
+        GERAR QR CODE
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3 QR CODE GERADO -->
+
+  <div class="bg-qr" *ngIf="qr">
+
+    <div class="flex">
+
+      <ion-icon (click)="showInputs()" class="back" name="arrow-back-circle-outline"></ion-icon>
+      <ion-icon class="icon-alternar" name="qr-code-outline"></ion-icon>
+    </div>
+
+
+    <img (click)="showComprovante()" class="qr-gerado" src="../../assets/qrcodegerado.png" alt="">
+  </div>
+
+  <!-- SCREEN 4 COMPROVANTE -->
+
+
+  <!-- O BACK DO COMPROVANTE ESTÁ NO COMEÇO DO HTML0 -->
+
+  <div *ngIf="comprovante">
+    <div class="card-comprovante">
+      <div>
+        <h1 class="title-comprovante">
+          Comprovante de Transação
+        </h1>
+        <p class="date">
+          19 NOV 2020, 15:52
+        </p>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <h2 class="title-infos">
+          VALOR
+        </h2>
+        <p class="infos">
+          R$000,00
+        </p>
+      </div>
+
+      <div>
+        <h2 class="title-infos">
+          ORIGEM
+        </h2>
+        <p class="infos">
+          000.000.000-00
+        </p>
+        <p class="infos">
+          JOÃO MARCOS BECKER
+        </p>
+      </div>
+
+      <div>
+        <h2 class="title-infos">
+          DESTINO
+        </h2>
+        <p class="infos">
+          000.000.000-00
+        </p>
+        <p class="infos">
+          Paulo Miguel dos Santos
+        </p>
+      </div>
+
+      <div style="margin-top: 60px;">
+        <p class="infos">
+          AUTENTICAÇÃO
+        </p>
+        <p class="infos">
+          009fc81c-ed71-4e82-b52f-7951eaf2cae4
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+</ion-content>
+<ion-footer>
+  <div class="footer">
+    <div [routerLink]="['/home']">
+      <img src="../../assets/icones/icon_home.png" alt="">
+    </div>
+    <div [routerLink]="['/explorar']">
+      <img src="../../assets/icones/icon_explore.png" alt="">
+    </div>
+    <div [routerLink]="['/perfil']">
+      <img src="../../assets/icones/icon_plus.png" alt="">
+    </div>
+  </div>
+</ion-footer>

@@ -1,0 +1,50 @@
+<ion-content>
+    <div class="bg-perfil">
+        <div>
+            <ion-icon  [routerLink]="['/home']" class="back" name="arrow-back-circle-outline"></ion-icon>
+        </div>
+        <div class="perfil">
+            <img class="img-perfil" src="../../assets/pexels-madison-inouye-4029477.jpg" alt="">
+        </div>
+        <div>
+            <h1 class="nome">Maria da Silva Santos</h1>
+        </div>
+
+        <div class="ajuste-container">
+            <div [routerLink]="['/meus-dados']" class="opt-container">
+                <h1 class="opt-perfil">
+                    Meus dados
+                </h1>
+            </div>
+            <div [routerLink]="['/notificacoes']" class="opt-container">
+                <h1 class="opt-perfil">
+                    Notificações
+                </h1>
+            </div>
+            <div [routerLink]="['/indicacoes']" class="opt-container">
+                <h1 class="opt-perfil">
+                    Rede de Indicações
+                </h1>
+            </div>
+            <div [routerLink]="['/config']" class="opt-container">
+                <h1 class="opt-perfil">
+                    Configurações
+                </h1>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer>
+    <div class="footer">
+        <div [routerLink]="['/home']">
+          <img src="../../assets/icones/icon_home.png" alt="">
+        </div>
+        <div [routerLink]="['/explorar']">
+          <img src="../../assets/icones/icon_explore.png" alt="">
+        </div>
+        <div [routerLink]="['/perfil']">
+          <img src="../../assets/icones/icon_plus.png" alt="">
+        </div>
+      </div>
+</ion-footer>

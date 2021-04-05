@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  public slidesOptions: any = { slidesPerView: 3, freeMode: true}
 
-  constructor() {}
-
+  constructor() {
+  }
 }

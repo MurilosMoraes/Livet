@@ -1,0 +1,73 @@
+<ion-content>
+
+  <!-- SCREEN 1 -->
+
+  <div *ngIf="screen1">
+
+    <div class="container-balde">
+      <img class="img-balde" src="../../assets/balde.gif" alt="">
+    </div>
+
+    <div class="card">
+      <h1 class="title">
+        Seja bem vindo(a) à Livet Pay, agora você faz parte da maior revolução de contas digitais do Mundo!
+      </h1>
+
+      <p class="sub">
+        Você já pode ganhar cashback com suas compras diretas ou feitas através de seus indicados.
+      </p>
+
+      <div class="flex">
+        <div class="large">
+
+        </div>
+        <div class="small">
+
+        </div>
+      </div>
+
+      <div (click)="nextScreen()" class="cta">
+        AVANÇAR
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SCREEN 2 -->
+
+
+  <div *ngIf="screen2">
+
+    <div class="container-balde">
+      <img class="img-pessoas" src="../../assets/abertura01.gif" alt="">
+    </div>
+
+    <div class="card">
+      <h1 class="title">
+        Compartilhe essa iniciativa com seus amigos e comece a expandir sua plantação. </h1>
+
+      <p class="sub">
+        Você irá se surpreender com o
+        quanto você pode ganhar com seu cashback e com o cashback de seus amigos!
+      </p>
+
+      <div class="flex">
+        <div class="small">
+
+        </div>
+        <div class="large">
+
+        </div>
+      </div>
+
+      <div [routerLink]="['/login']" class="cta">
+        AVANÇAR
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

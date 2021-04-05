@@ -1,0 +1,69 @@
+<ion-content> 
+
+  <!-- SCAN -->
+
+  <div *ngIf="scan">
+    <div class="flex">
+      <ion-icon  [routerLink]="['/home']" class="back" name="arrow-back-circle-outline"></ion-icon>
+      <div>
+        <ion-icon (click)="showDown()" class="icon-down" name="download-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="title">
+        Escaneie o QR Code
+      </h1>
+      <p class="sub">
+        Indique amigos agora com o seu QR
+      </p>
+
+      <p class="sub">
+        Code escaneável
+      </p>
+      <img class="img" src="../../assets/qr_exemplo.png" alt="">
+
+
+      <div class="cta">
+        ESCANEAR
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- DOWNLOAD -->
+
+  <div *ngIf="down">
+    <ion-icon  (click)="showScan()" class="back" name="arrow-back-circle-outline"></ion-icon>
+
+    <div class="container">
+      <img src="../../assets/menina_qrcode.gif" alt="">
+      <div>
+        <h1 style="margin-top: 20px;" class="title">
+          QR Code gerado!
+        </h1>
+        <p class="sub">
+          Faça download do seu QR Code, imprima, <br> indique amigos e saia ganhando!
+        </p>
+      </div>
+      <div class="cta-down">
+        <ion-icon class="icon-down-page" name="download-outline"></ion-icon>
+        <p>BAIXAR QR CODE</p>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <div class="footer">
+    <div [routerLink]="['/home']">
+      <img src="../../assets/icones/icon_home.png" alt="">
+    </div>
+    <div [routerLink]="['/explorar']">
+      <img src="../../assets/icones/icon_explore.png" alt="">
+    </div>
+    <div [routerLink]="['/perfil']">
+      <img src="../../assets/icones/icon_plus.png" alt="">
+    </div>
+  </div>
+</ion-footer>

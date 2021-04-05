@@ -1,0 +1,125 @@
+<ion-content>
+
+  <!-- SAQUE -->
+
+  <div *ngIf="saque">
+    <div>
+      <ion-icon [routerLink]="['/perfil-loja']" class="back" name="arrow-back-circle-outline"></ion-icon>
+    </div>
+    <div class="card-comprovante">
+
+      <div>
+        <h1 class="title">
+          Solicitação de Saque
+        </h1>
+        <p class="sub">
+          Confirme a loja parceira de sua escolha, <br> insira o valor de saque e sua forma de pagamento </p>
+      </div>
+      <div>
+        <h1 style="margin-top: 30px;" class="title-input">
+          Confirme o estabelecimento
+        </h1>
+
+        <ion-input class="input" placeholder="Doceria da Kah"></ion-input>
+      </div>
+
+      <div>
+        <h1 style="margin-top: 20px;" class="title-input">
+          Valor de Saque
+        </h1>
+
+        <ion-input class="input" placeholder="R$50,00"></ion-input>
+
+      </div>
+
+      <!-- CASO ULTRAPASSE O VALOR -->
+      <!-- ---------------------------------- -->
+
+      <p class="aviso">O valor máximo de saque é de R$50,00</p>
+
+      <div class="cta-disabled">
+        CONFIRMAR SOLICITAÇÃO
+      </div>
+
+      <!-- ---------------------------------- -->
+
+      <div (click)="showAguardando()" class="cta">
+        CONFIRMAR SOLICITAÇÃO
+      </div>
+    </div>
+  </div>
+
+  <!-- AGUARDANDO -->
+
+  <div *ngIf="aguardando">
+    <div>
+      <ion-icon (click)="showSaque()" class="back" name="arrow-back-circle-outline"></ion-icon>
+    </div>
+
+    <div class="card-comprovante">
+      <h1 class="title">
+        Seu saque foi solicitado
+      </h1>
+      <p class="sub">
+        Agora basta aguardar a loja participante <br> escolhida confirmar sua solicitação
+      </p>
+
+      <div>
+        <img (click)="showConfirmar()" class="wait" src="../../assets/please-wait2.gif" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRMAÇÃO  -->
+
+  <div *ngIf="confirmar">
+    <div>
+      <ion-icon (click)="showAguardando()"class="back" name="arrow-back-circle-outline"></ion-icon>
+    </div>
+
+    <div class="card-comprovante">
+      <h1 class="title">
+        Seu saque foi solicitado
+      </h1>
+      <p class="sub">
+        Agora basta aguardar a loja participante <br> escolhida confirmar sua solicitação
+      </p>
+
+      <div>
+        <img class="wait" src="../../assets/please-wait2.gif" alt="">
+      </div>
+
+      <div (click)="showConfirmado()" class="cta-confirmar">
+        CONFIRMAR SOLICITAÇÃO
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRMADO -->
+
+  <div *ngIf="confirmado">
+    <div>
+      <ion-icon [routerLink]="['/perfil-loja']" class="back" name="arrow-back-circle-outline"></ion-icon>
+    </div>
+
+    <div class="card-comprovante">
+      <h1 class="title">Saque confirmado!</h1>
+      <img class="confirmado" src="../../assets/sucesso.gif" alt="">
+    </div>
+  </div>
+
+
+</ion-content>
+<ion-footer no-border>
+  <div class="footer">
+    <div [routerLink]="['/home']">
+      <img src="../../assets/icones/icon_home.png" alt="">
+    </div>
+    <div [routerLink]="['/explorar']">
+      <img src="../../assets/icones/icon_explore.png" alt="">
+    </div>
+    <div [routerLink]="['/perfil']">
+      <img src="../../assets/icones/icon_plus.png" alt="">
+    </div>
+  </div>
+</ion-footer>

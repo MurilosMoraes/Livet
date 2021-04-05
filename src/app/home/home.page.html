@@ -1,20 +1,209 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+    <div class="bg-home">
+        <div class="container">
+            <img class="perfil-home" src="../../assets/pexels-madison-inouye-4029477.jpg" alt="">
+        </div>
+        <div>
+            <h1 class="title">
+                Bem vinda, <br> Maria
+            </h1>
+        </div>
+        <ion-grid>
+            <ion-row>
+                <ion-col size="6">
+                    <div class="container-card">
+                        <div class="line"></div>
+                        <div>
+                            <img class="chip" src="../../assets/icones/chip-icon.png" alt="">
+                        </div>
+                        <div>
+                            <img class="dna" src="../../assets/icones/icon_dna.png" alt="">
+                            <p class="nome-card">João J. Becker</p>
+                        </div>
+                    </div>
+                </ion-col>
+                <ion-col size="6">
+                    <div>
+                        <h1 class="saldo">Saldo</h1>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+                        <div class="cta">
+                            <ion-icon class="wallet" name="wallet-outline"></ion-icon>
+                            <p> R$145,00</p>
+                        </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+                        <h1 style="margin-top: 15px !important;" class="saldo">Operações Rápidas</h1>
+
+                        <div class="flex-rapido">
+
+
+                            <div class="cta-2">
+                                <ion-icon [routerLink]="['/transferencia']" name="git-compare-outline"></ion-icon>
+                            </div>
+
+                            <div class="cta-2">
+                                <ion-icon [routerLink]="['/qr']" name="qr-code-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <div>
+            <h1 class="title-op">
+                Transação
+            </h1>
+        </div>
+        <div>
+            <ion-slides style="margin-bottom: 20px;" [options]="slidesOptions">
+                <ion-slide>
+                    <div [routerLink]="['/indicacoes']" class="container-slide">
+                        <img class="imgs" src="../../assets/icones/share-icon.png" alt="">
+                        <p class="text-card">Indicar</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div [routerLink]="['/adicionar-saldo']" class="container-slide">
+                        <img class="imgs" src="../../assets/cash-icon.png" alt="">
+                        <p class="text-card">Adicionar Saldo</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="container-slide">
+                        <img class="imgs" src="../../assets/icones/bank-icon.png" alt="">
+                        <p class="text-card">Minhas Contas</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div  [routerLink]="['/ver-saques']" class="container-slide">
+                        <img class="imgs" src="../../assets/cash-icon.png" alt="">
+                        <p class="text-card">Ver Saques</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div [routerLink]="['/config']" class="container-slide">
+                        <img class="imgs" src="../../assets/icones/settings-icon.png" alt="">
+                        <p class="text-card">Configurações</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div style="margin-right: 10px;" class="container-slide">
+                        <img class="imgs" src="../../assets/icones/help-icon.png" alt="">
+                        <p class="text-card">Ajuda</p>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </div>
+
+        <div class="container-gray">
+            <div class="flex">
+                <div class="title-gray">
+                    Extrato
+                </div>
+                <div>
+                    <ion-icon class="funnel" name="funnel-outline"></ion-icon>
+                </div>
+            </div>
+
+
+
+            <div style="margin-top: 20px;">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="2">
+                            <div class="data">
+                                10/11
+                            </div>
+                        </ion-col>
+                        <ion-col size="7.5">
+                            <div class="description">
+                                Transferência Marcio Alberto
+                            </div>
+                        </ion-col>
+                        <ion-col size="2.5">
+                            <div class="valor-negativo">
+                                -R$29,00
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="2">
+                            <div class="data">
+                                10/11
+                            </div>
+                        </ion-col>
+                        <ion-col size="7.5">
+                            <div class="description">
+                                Doceria da Kah
+                            </div>
+                        </ion-col>
+                        <ion-col size="2.5">
+                            <div class="valor-positivo">
+                                +R$2.900,00
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="2">
+                            <div class="data">
+                                10/11
+                            </div>
+                        </ion-col>
+                        <ion-col size="7.5">
+                            <div class="description">
+                                Doceria da Kah
+                            </div>
+                        </ion-col>
+                        <ion-col size="2.5">
+                            <div class="valor-negativo">
+                                -R$18,00
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="2">
+                            <div class="data">
+                                10/11
+                            </div>
+                        </ion-col>
+                        <ion-col size="7.5">
+                            <div class="description">
+                                Doceria da Kah
+                            </div>
+                        </ion-col>
+                        <ion-col size="2.5">
+                            <div class="valor-negativo">
+                                -R$22,00
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </div>
+
+    </div>
+
+
 </ion-content>
+<ion-footer>
+    <div class="footer">
+        <div [routerLink]="['/home']">
+            <img src="../../assets/icones/icon_home.png" alt="">
+        </div>
+        <div [routerLink]="['/explorar']">
+            <img src="../../assets/icones/icon_explore.png" alt="">
+        </div>
+        <div [routerLink]="['/perfil']">
+            <img src="../../assets/icones/icon_plus.png" alt="">
+        </div>
+    </div>
+</ion-footer>

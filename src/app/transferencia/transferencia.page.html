@@ -1,0 +1,70 @@
+<ion-content no-border>
+    <div>
+        <ion-icon [routerLink]="['/home']" class="back" name="arrow-back-circle-outline"></ion-icon>
+    </div>
+    <div class="card">
+        <div>
+            <h1 class="title">
+                Realize Transferências
+            </h1>
+        </div>
+        <div  [routerLink]="['/transferencia-details']" class="container1">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="1.5">
+                        <ion-icon class="icon-transferencia" name="person-add-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col size="9.5">
+                        <h1 class="title-transferencia">
+                            Transferência
+                        </h1>
+                        <p class="sub-transferencia">
+                            insira o CPF/CNPJ do destino
+                        </p>
+                    </ion-col>
+                    <ion-col size="1">
+                        <ion-icon class="icon-chevron" name="chevron-forward-outline"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+
+        <div [routerLink]="['/gerar-qr']" style="margin-top: 20px;">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="1.5">
+                        <ion-icon class="icon-transferencia" name="qr-code-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col size="9.5">
+                        <h1 class="title-transferencia">
+                            Transferência por QR Code
+                        </h1>
+                        <p  class="sub-transferencia">
+                            Gere um Qr Code para realizar sua transferência
+                        </p>
+                    </ion-col>
+                    <ion-col size="1">
+                        <ion-icon class="icon-chevron" name="chevron-forward-outline"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <div>
+            <img src="../../assets/animacoes/realizartransf.gif" alt="">
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer no-border>
+    <div class="footer">
+        <div [routerLink]="['/home']">
+          <img src="../../assets/icones/icon_home.png" alt="">
+        </div>
+        <div [routerLink]="['/explorar']">
+          <img src="../../assets/icones/icon_explore.png" alt="">
+        </div>
+        <div [routerLink]="['/perfil']">
+          <img src="../../assets/icones/icon_plus.png" alt="">
+        </div>
+      </div>
+</ion-footer>

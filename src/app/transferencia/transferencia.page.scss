@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ion-content {
+  --background: #ddeaeb;
+}
+
+.back {
+  margin-top: 25px;
+  font-size: 30px;
+  margin-left: 20px;
+  color: #229995;
+}
+
+.card {
+  padding: 0px 10px !important;
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+  height: 90%;
+  border-radius: 40px 40px 0 0;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #162549;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container1 {
+  margin-top: 60px;
+  border-bottom: .5px solid #22999530;
+  padding-bottom: 20px;
+}
+
+.icon-transferencia {
+  font-size: 30px;
+  color: #229995;
+}
+
+.icon-chevron {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #229995;
+
+}
+
+.title-transferencia {
+  font-size: 16px;
+  color: #162549;
+}
+
+.sub-transferencia {
+  font-size: 12px;
+  color: #162549;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  height: 70px;
+  border-radius: 40px 40px 0 0;
+  -webkit-box-shadow: 0px -1px 5px 0px rgba(51, 51, 51, 0.3);
+  -moz-box-shadow: 0px -1px 5px 0px rgba(51, 51, 51, 0.3);
+  box-shadow: 0px -1px 5px 0px rgba(51, 51, 51, 0.3);
+  padding: 0 10px !important;
+}
+
+.icon {
+  font-size: 30px;
+  color: #229995;
+}

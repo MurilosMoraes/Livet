@@ -1,0 +1,72 @@
+<ion-content>
+  <div>
+    <ion-icon [routerLink]="['/perfil']" class="back" name="arrow-back-circle-outline"></ion-icon>
+  </div>
+  <div>
+    <h1 class="title">
+      Meus Dados
+    </h1>
+  </div>
+
+  <div class="container-input mg-top-50">
+    <h1 class="title-input">
+      NOME/RAZÃO SOCIAL
+    </h1>
+
+    <ion-input class="input" placeholder="João Marcos Becker"></ion-input>
+  </div>
+
+
+  <div class="container-input mg-top-20">
+    <h1 class="title-input">
+      CPF/CNPJ
+    </h1>
+
+    <ion-input class="input" placeholder="000.000.000-00"></ion-input>
+  </div>
+
+
+  <div class="container-input mg-top-20">
+    <h1 class="title-input">
+      EMAIL
+    </h1>
+
+    <ion-input class="input" type="email" placeholder="loremipsum@ipsum.com"></ion-input>
+  </div>
+
+  <div class="container-input mg-top-20">
+    <h1 class="title-input">
+      TELEFONE
+    </h1>
+
+    <ion-input class="input" placeholder="(00)00000-0000"></ion-input>
+  </div>
+
+
+  <div class="container-input mg-top-20">
+    <h1 class="title-input">
+      SENHA
+    </h1>
+
+    <ion-input class="input" type="password" placeholder="********"></ion-input>
+  </div>
+
+  <div [routerLink]="['/perfil']" class="cta">
+    ATUALIZAR DADOS
+  </div>
+
+
+</ion-content>
+<ion-footer>
+  <div class="footer">
+    <div [routerLink]="['/home']">
+      <img src="../../assets/icones/icon_home.png" alt="">
+    </div>
+    <div [routerLink]="['/explorar']">
+      <img src="../../assets/icones/icon_explore.png" alt="">
+    </div>
+    <div [routerLink]="['/perfil']">
+      <img src="../../assets/icones/icon_plus.png" alt="">
+    </div>
+  </div>
+</ion-footer>

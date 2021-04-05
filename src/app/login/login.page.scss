@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.bg-login {
+  background-image: url("../../assets/fundo_login.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  width: 60%;
+  margin-left: 20%;
+  padding-top: 120px;
+}
+
+.input {
+  margin-top: 5px;
+  background-color: #fff;
+  width: 90%;
+  margin-left: 5%;
+  border: .3px solid #229995;
+  border-radius: 6px;
+  height: 30px;
+  padding: 0px 10px !important;
+}
+
+.esqueceu {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+
+}
+
+.cta {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 20px;
+  background-color: #229995;
+  border-radius: 100px;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+}
+

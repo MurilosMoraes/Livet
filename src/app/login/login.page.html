@@ -1,0 +1,28 @@
+<ion-content>
+  <div class="bg-login">
+    <div class="logo">
+      <img src="../../assets/logo_livetpay.png" alt="">
+    </div>
+    <div style="margin-top: 40px;">
+      <ion-input class="input" placeholder="CPF, CNPJ ou E-mail"></ion-input>
+      <ion-input class="input" placeholder="Senha"></ion-input>
+    </div>
+
+    <div>
+      <p class="esqueceu">
+        Esqueceu sua senha?
+      </p>
+    </div>
+
+    <div [routerLink]="['/home']" class="cta">
+      LOGIN
+    </div>
+
+
+    <div style="margin-top: 100px;">
+      <p class="esqueceu">
+        Não possui uma conta? Faça seu cadastro.
+      </p>
+    </div>
+  </div>
+</ion-content>
