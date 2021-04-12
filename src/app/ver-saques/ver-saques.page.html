@@ -1,9 +1,569 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>ver-saques</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div *ngIf="escolher">
+
+    <ion-icon [routerLink]="['/home']" class="back" name="arrow-back-circle-outline"></ion-icon>
+
+    <h1 class="title">
+      Escolha qual tipo de saque deseja ver
+    </h1>
+
+    <div (click)="showPendentes()" class="cta-1">
+      SAQUES PENDENTES
+    </div>
+
+    <div (click)="showAprovados()" class="cta-2">
+      SAQUES APROVADOS
+    </div>
+
+
+    <div (click)="showCancelados()" class="cta-3">
+      SAQUES CANCELADOS
+    </div>
+
+  </div>
+
+
+
+  <!-- Pendentes -->
+
+  <div *ngIf="pendentes">
+
+    <ion-icon (click)="showEscolher()" class="back" name="arrow-back-circle-outline"></ion-icon>
+
+    <h1 class="title">
+      Saques aprovados
+    </h1>
+
+    <div style="margin-top: 30px;" class="container">
+      <div class="flex-geral">
+        <div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/id-icon.png" alt="">
+            </div>
+            <div>
+              <p class="infos">Paulo Vitor Santos</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/cash-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">R$45,00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/calendar-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">15/12/2020</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex-btns">
+            <div class="v"><img src="../../assets/icones/cash-icon-gray.svg" alt=""></div>
+            <div class="x"><img src="../../assets/icones/cash-icon-gray.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="flex-geral">
+        <div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/id-icon.png" alt="">
+            </div>
+            <div>
+              <p class="infos">Paulo Vitor Santos</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/cash-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">R$45,00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/calendar-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">15/12/2020</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex-btns">
+            <div class="v"><img src="../../assets/icones/cash-icon-gray.svg" alt=""></div>
+            <div class="x"><img src="../../assets/icones/cash-icon-gray.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="flex-geral">
+        <div class="infos">
+          Aguardando confirmação
+        </div>
+
+        <div>
+          <div class="btn-aguardando">
+            <img src="../../assets/icones/cash-icon-gray.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="flex-geral">
+        <div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/id-icon.png" alt="">
+            </div>
+            <div>
+              <p class="infos">Paulo Vitor Santos</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/cash-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">R$45,00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/calendar-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">15/12/2020</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex-btns">
+            <div class="v"><img src="../../assets/icones/cash-icon-gray.svg" alt=""></div>
+            <div class="x"><img src="../../assets/icones/cash-icon-gray.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="flex-geral">
+        <div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/id-icon.png" alt="">
+            </div>
+            <div>
+              <p class="infos">Paulo Vitor Santos</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/cash-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">R$45,00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/calendar-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">15/12/2020</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex-btns">
+            <div class="v"><img src="../../assets/icones/cash-icon-gray.svg" alt=""></div>
+            <div class="x"><img src="../../assets/icones/cash-icon-gray.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- APROVADOS -->
+
+  <div *ngIf="aprovados">
+
+    <ion-icon (click)="showEscolher()" class="back" name="arrow-back-circle-outline"></ion-icon>
+
+    <h1 class="title">
+      Solicitações de saque - Pendentes
+    </h1>
+
+    <div style="margin-top: 30px;" class="container">
+      <div class="flex-geral">
+        <div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/id-icon.png" alt="">
+            </div>
+            <div>
+              <p class="infos">Paulo Vitor Santos</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/cash-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">R$45,00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/calendar-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">15/12/2020</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="comprovante">
+            COMPROVANTE
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="flex-geral">
+        <div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/id-icon.png" alt="">
+            </div>
+            <div>
+              <p class="infos">Paulo Vitor Santos</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/cash-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">R$45,00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/calendar-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">15/12/2020</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="comprovante">
+            COMPROVANTE
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="flex-geral">
+        <div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/id-icon.png" alt="">
+            </div>
+            <div>
+              <p class="infos">Paulo Vitor Santos</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/cash-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">R$45,00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/calendar-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">15/12/2020</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="comprovante">
+            COMPROVANTE
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="flex-geral">
+        <div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/id-icon.png" alt="">
+            </div>
+            <div>
+              <p class="infos">Paulo Vitor Santos</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/cash-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">R$45,00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/calendar-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">15/12/2020</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="comprovante">
+            COMPROVANTE
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="flex-geral">
+        <div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/id-icon.png" alt="">
+            </div>
+            <div>
+              <p class="infos">Paulo Vitor Santos</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/cash-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">R$45,00</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img class="icon" src="../../assets/icones/calendar-icon.svg" alt="">
+            </div>
+            <div>
+              <p class="infos">15/12/2020</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="comprovante">
+            COMPROVANTE
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CANCELADOS -->
+
+  <div *ngIf="cancelados">
+
+    <ion-icon (click)="showEscolher()" class="back" name="arrow-back-circle-outline"></ion-icon>
+
+    <h1 class="title">
+      Saques cancelados
+    </h1>
+
+    <div style="margin-top: 30px;" class="container">
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/id-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">Paulo Vitor Santos</p>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/cash-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">R$45,00</p>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/calendar-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">15/12/2020</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/id-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">Paulo Vitor Santos</p>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/cash-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">R$45,00</p>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/calendar-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">15/12/2020</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/id-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">Paulo Vitor Santos</p>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/cash-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">R$45,00</p>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/calendar-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">15/12/2020</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/id-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">Paulo Vitor Santos</p>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/cash-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">R$45,00</p>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <img class="icon" src="../../assets/icones/calendar-icon-gray.svg" alt="">
+        </div>
+        <div>
+          <p class="infos-gray">15/12/2020</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
 
 </ion-content>
+<ion-footer>
+  <div class="footer">
+    <div [routerLink]="['/home']">
+      <img src="../../assets/icones/icon_home.png" alt="">
+    </div>
+    <div [routerLink]="['/explorar']">
+      <img src="../../assets/icones/icon_explore.png" alt="">
+    </div>
+    <div [routerLink]="['/perfil']">
+      <img src="../../assets/icones/icon_plus.png" alt="">
+    </div>
+  </div>
+</ion-footer>
