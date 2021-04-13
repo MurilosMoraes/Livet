@@ -83,6 +83,10 @@ const routes: Routes = [
     path: 'ver-saques',
     loadChildren: () => import('./ver-saques/ver-saques.module').then( m => m.VerSaquesPageModule)
   },
+  {
+    path: 'rede',
+    loadChildren: () => import('./rede/rede.module').then( m => m.RedePageModule)
+  },
 ];
 
 @NgModule({
